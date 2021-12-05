@@ -75,4 +75,14 @@ public class UserController {
     public Integer delete(@PathVariable("id") Integer id){
        return userService.deleteById(id);
     }
+    
+    /**
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/{id}")
+    public User getUser(@PathVariable("id") Integer id){
+        return userService.getUserById(id);
+    }
 }

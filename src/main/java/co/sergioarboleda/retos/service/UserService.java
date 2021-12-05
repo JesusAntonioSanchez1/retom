@@ -81,6 +81,12 @@ public class UserService {
                 if(user.getName()!=null){
                     userExist.get().setName(user.getName());
                 }
+                 if(user.getBirthtDay()!=null){
+                    userExist.get().setBirthtDay(user.getBirthtDay());
+                }
+                if(user.getMonthBirthtDay()!=null){
+                    userExist.get().setMonthBirthtDay(user.getMonthBirthtDay());
+                }
                 if(user.getAddress()!=null){
                     userExist.get().setAddress(user.getAddress());
                 }
@@ -125,5 +131,20 @@ public class UserService {
         }else{
             return id;
         }
+    }
+       
+        /**
+     *
+     * @param id
+     * @return
+     */
+    public User getUserById(Integer id){
+        /*Optional<User> usuario = repository.getUserById(id);
+        if(usuario.isPresent()){
+            return usuario.get();
+        }else{
+            return  new User;
+        }*/
+        return userRepository.getUserById(id).orElse(new User());
     }
 }
