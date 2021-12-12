@@ -95,6 +95,25 @@ public class OrderService {
         }*/
         return orderRepository.getUserById(id).orElse(new Order());
     }
+    
+     public List<Order> getOrdersBySalesman(Integer ids){
+        return orderRepository.getOrderBySalesman(ids);
+    }
+    
+    public List<Order> getOrdersByStatusAndId(String status, Integer ids){
+        return orderRepository.getOrdersByStatusAndId(status,ids);
+        
+    }
+    
+    
+    
+    
+    public List <Order> getByRegisterDayAndSalesManId(String registerDay, Integer id){
+        return orderRepository.getByRegisterDayAndSalesManId(registerDay,id);
+   
+     }
+
+     
 
      
     
