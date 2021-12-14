@@ -88,5 +88,13 @@ public class ClotheService {
             return id;
         }
     }
+     
+      public List<Clothe> getClotheByPrice(Integer precio){
+        return clotheRepository.getClotheByPrice(precio);
+    }
+      
+      public List<Clothe> getClotheByDescription(String dc){
+        return clotheRepository.getClotheByDescription(dc);
+    }
    
 }

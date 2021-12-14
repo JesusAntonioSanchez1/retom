@@ -147,4 +147,9 @@ public class UserService {
         }*/
         return userRepository.getUserById(id).orElse(new User());
     }
+    
+    public List <User> getByMonthBirthtDay(String monthBirthtDay){
+        return userRepository.getByMonthBirthtDay(monthBirthtDay);
+   
+     }
 }

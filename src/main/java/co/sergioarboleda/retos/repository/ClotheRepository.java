@@ -39,5 +39,13 @@ public class ClotheRepository {
         clotheCrudRepository.deleteById(id);
     }
     
+     public List<Clothe> getClotheByPrice(Integer precio){
+        return  clotheCrudRepository.findByPrice(precio);
+    }
+     
+     public List<Clothe> getClotheByDescription(String dc){
+        return  clotheCrudRepository.findByDescriptionContains(dc);
+    }
+    
     
 }

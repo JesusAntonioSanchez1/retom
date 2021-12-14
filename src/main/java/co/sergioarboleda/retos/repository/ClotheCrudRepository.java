@@ -7,6 +7,7 @@ package co.sergioarboleda.retos.repository;
 
 
 import co.sergioarboleda.retos.entity.Clothe;
+import java.util.List;
 import java.util.Optional;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
@@ -17,5 +18,10 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 public interface ClotheCrudRepository extends MongoRepository<Clothe, String>{
     
     public Optional<Clothe> findById(String id); 
+    
+    public List<Clothe> findByPrice(Integer precio);
+    
+    public List<Clothe> findByDescriptionContains(String dc);
+    
     
 }

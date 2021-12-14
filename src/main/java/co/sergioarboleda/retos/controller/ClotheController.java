@@ -50,4 +50,14 @@ public class ClotheController {
        return clotheService.deleteById(id);
     }
     
+    @GetMapping("/price/{precio}")
+    public List<Clothe> getCloneByPrice(@PathVariable("precio") Integer precio){
+        return clotheService.getClotheByPrice(precio);
+    }
+    
+    @GetMapping("/description/{dc}")
+    public List<Clothe> getCloneByDescription(@PathVariable("dc") String dc){
+        return clotheService.getClotheByDescription(dc);
+    }
+    
 }
