@@ -40,8 +40,8 @@ public class Retosc4Application implements CommandLineRunner{
     @Override
     public void run(String... args) throws Exception {
        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-       cloneRepository.deleteAll();
-       userRepository.deleteAll();
+    //   cloneRepository.deleteAll();
+    //   userRepository.deleteAll();
        
     }
 

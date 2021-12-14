@@ -44,7 +44,7 @@ public class ClotheRepository {
     }
      
      public List<Clothe> getClotheByDescription(String dc){
-        return  clotheCrudRepository.findByDescriptionContains(dc);
+        return  clotheCrudRepository.findByDescriptionContainingIgnoreCase(dc);
     }
     
     
