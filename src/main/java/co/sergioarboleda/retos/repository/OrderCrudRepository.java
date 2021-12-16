@@ -32,6 +32,7 @@ public interface OrderCrudRepository extends MongoRepository<Order, Integer> {
      
     
   
-     public List<Order> findByRegisterDayAndSalesManId(Date registerDay,Integer id);
+    // public List<Order> findByRegisterDayAndSalesManId(Date registerDay,Integer id);
+     public List<Order> findByRegisterDayBetweenAndSalesMan_id (Date fecha1,Date fecha2,Integer id);
     
 }

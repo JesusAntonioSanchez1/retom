@@ -8,6 +8,7 @@ package co.sergioarboleda.retos.repository;
 import co.sergioarboleda.retos.entity.Order;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,16 +64,9 @@ public class OrderRepository {
         return  orderCrudRepository.findByStatusAndId(status,ids);
     }
      
-     public List<Order> getByRegisterDayAndSalesManId(String registerDay,Integer id){
-        try {
-            return orderCrudRepository.findByRegisterDayAndSalesManId(new SimpleDateFormat("yyyy-MM-dd").parse(registerDay),id);
-           
-        } catch (ParseException ex) {
-            ex.printStackTrace();
-          //  Logger.getLogger(OrderRepository.class.getName()).log(Level.SEVERE, null, ex);
-            return null;
-        }
+     public List<Order> getByRegisterDayAndSalesManId(Date registerDay,Date registerDay1,Integer id){
         
+        return  orderCrudRepository.findByRegisterDayBetweenAndSalesMan_id(registerDay,registerDay1, id);
     }
 
 
