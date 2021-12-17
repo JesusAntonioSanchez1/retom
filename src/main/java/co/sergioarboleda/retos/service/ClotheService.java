@@ -97,8 +97,9 @@ public class ClotheService {
         return clotheRepository.getClotheByDescription(dc);
     }
       
-      public List<Clothe> getClotheByReference(String reference){
-        return clotheRepository.getClotheByReference(reference);
+      public Clothe getClotheByReference(String reference){
+        return clotheRepository.getClotheByReference(reference).orElse(new Clothe());  
+      //  return clotheRepository.getClotheByReference(reference);
     }
    
 }
