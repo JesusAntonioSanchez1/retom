@@ -21,6 +21,8 @@ public interface ClotheCrudRepository extends MongoRepository<Clothe, String>{
     
     public List<Clothe> findByPrice(Integer precio);
     
+    public List<Clothe> findByReference(String reference);
+    
    // public List<Clothe> findByDescriptionContains(String dc);
    //  public List<Clothe> findByDescriptionLike(String dc);
        public List<Clothe> findByDescriptionContainingIgnoreCase(String title);

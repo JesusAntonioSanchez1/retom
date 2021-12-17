@@ -60,4 +60,10 @@ public class ClotheController {
         return clotheService.getClotheByDescription(dc);
     }
     
+     @GetMapping("/{reference}")
+    public List<Clothe> getClotheByReference(@PathVariable("reference") String reference){
+        return clotheService.getClotheByReference(reference);
+    }
+    
+    
 }

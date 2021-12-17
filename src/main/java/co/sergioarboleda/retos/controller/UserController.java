@@ -90,5 +90,7 @@ public class UserController {
     public List<User> getByMonthBirthtDay(@PathVariable("monthBirthtDay") String monthBirthtDay ){
         return userService.getByMonthBirthtDay(monthBirthtDay);
     }
+    
+    
 
 }

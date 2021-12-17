@@ -46,6 +46,10 @@ public class ClotheRepository {
      public List<Clothe> getClotheByDescription(String dc){
         return  clotheCrudRepository.findByDescriptionContainingIgnoreCase(dc);
     }
+     
+     public List<Clothe> getClotheByReference(String reference){
+        return  clotheCrudRepository.findByReference(reference);
+    }
     
     
 }
